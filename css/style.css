@@ -4,19 +4,18 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     font-family: system-ui, sans-serif;
     background-color: #023047;
     color: #050505;
     font-size: 100%;
 }
 
-h1 {
-    font-size: calc(1.5rem + 2vw);
-    color: white;
-}
+
 
 .main-title {
+    font-size: calc(1.5rem + 2vw);
+    color: white;
     text-align: center;
     margin: 24px 0;
 }

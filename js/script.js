@@ -92,4 +92,20 @@ for (let i = 0; i < posts.length; i++) {
             </div>
         </div>
         `;
-} 
+}
+const likeButtons = document.querySelectorAll('.js-like-button')
+console.log('likeButtons', likeButtons, likeButtons.length)
+
+for (let i = 0; i < likeButtons.length; i++) {
+    likeButtons[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        this.classList.add('like-button--liked')
+
+        const postId = this.dataset.postid
+
+        const counterElem = document.getElementById('like-counter-' + postId)
+        let likesCount = parseInt(counterElem.innerText)
+        likesCount++;
+        counterElem.innerHTML = likesCount;
+    })
+}
