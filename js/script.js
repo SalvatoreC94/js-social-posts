@@ -93,19 +93,27 @@ for (let i = 0; i < posts.length; i++) {
         </div>
         `;
 }
-const likeButtons = document.querySelectorAll('.js-like-button')
-console.log('likeButtons', likeButtons, likeButtons.length)
+const likeButtons = document.querySelectorAll('.js-like-button');
 
 for (let i = 0; i < likeButtons.length; i++) {
     likeButtons[i].addEventListener('click', function (e) {
         e.preventDefault();
-        this.classList.add('like-button--liked')
 
-        const postId = this.dataset.postid
+        const postId = this.dataset.postid;
+        const counterElem = document.getElementById('like-counter-' + postId);
+        let likesCount = parseInt(counterElem.innerText);
 
-        const counterElem = document.getElementById('like-counter-' + postId)
-        let likesCount = parseInt(counterElem.innerText)
-        likesCount++;
-        counterElem.innerHTML = likesCount;
-    })
+
+        if (this.classList.contains('like-button--liked')) {
+
+            likesCount--;
+            this.classList.remove('like-button--liked');
+        } else {
+
+            likesCount++;
+            this.classList.add('like-button--liked');
+        }
+
+        counterElem.innerText = likesCount;
+    });
 }
