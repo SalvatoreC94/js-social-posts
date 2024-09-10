@@ -1,25 +1,45 @@
-Ciao ragazzi, esercizio di oggi: Social Posts
-nome repo: js-social-posts
-Descrizione
-Ricreiamo un feed social aggiungendo al layout di base fornito, il nostro script JS in cui:
-Milestone 1
-Creiamo il nostro array di oggetti che rappresentano ciascun post.
-Ogni post dovrà avere le informazioni necessarie per stampare la relativa card:
--id del post, numero progressivo da 1 a n
--nome autore,
--foto autore,
--data in formato americano (mm-gg-yyyy),
--testo del post,
--immagine (non tutti i post devono avere una immagine),
--numero di likes.
-Non è necessario creare date casuali Per le immagini va bene utilizzare qualsiasi servizio di placeholder ad es. Unsplash (https://unsplash.it/300/300?image=<id>)
-Milestone 2
-Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed.
-Milestone 3
-Se clicchiamo sul tasto "Mi Piace" cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo. Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
-BONUS
-1.Formattare le date in formato italiano (gg/mm/aaaa)
-2.Gestire l'assenza dell'immagine profilo con un elemento di fallback che contiene le iniziali dell'utente (es. Luca Formicola > LF).
-3.Al click su un pulsante "Mi Piace" di un post, se abbiamo già cliccato dobbiamo decrementare il contatore e cambiare il colore del bottone.
-Consigli del giorno:
-Ragioniamo come sempre a step. Prima scriviamo nei commenti la logica in italiano e poi traduciamo in codice. console.log() è nostro amico. Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
+# Social Posts
+
+Questo progetto ha lo scopo di creare un feed social dinamico utilizzando JavaScript per gestire i post, i like, e altre funzionalità interattive.
+
+## Descrizione
+
+Il progetto si divide in diverse milestone che coprono le varie funzionalità da implementare.
+
+### Milestone 1
+
+Creiamo un array di oggetti che rappresentano ciascun post. Ogni post dovrà contenere le seguenti informazioni:
+
+- `id`: numero progressivo da 1 a n
+- `nome autore`
+- `foto autore`
+- `data`: in formato americano (mm-gg-yyyy)
+- `testo del post`
+- `immagine` (non tutti i post devono avere un'immagine)
+- `numero di likes`
+
+Le immagini possono essere ottenute da un servizio di placeholder, come ad esempio [Unsplash](https://unsplash.it/300/300?image=<id>).
+
+### Milestone 2
+
+Stampiamo i post del nostro feed prendendo come riferimento il layout di esempio presente nell'HTML.
+
+### Milestone 3
+
+Aggiungiamo l'interattività:
+
+- Se clicchiamo sul tasto **"Mi Piace"**, il testo del bottone cambia colore.
+- Il numero di like viene incrementato.
+- Gli id dei post ai quali è stato messo un like vengono salvati in un secondo array.
+
+### Bonus
+
+1. **Formattare le date** in formato italiano (gg/mm/aaaa).
+2. **Gestire l'assenza dell'immagine profilo** con un elemento di fallback che mostra le iniziali dell'utente (es. "Luca Formicola" → "LF").
+3. **Gestire il doppio click sul tasto "Mi Piace"**: se abbiamo già cliccato il like, il contatore viene decrementato e il colore del bottone torna allo stato originale.
+
+## Consigli
+
+- Ragioniamo passo passo: prima definiamo la logica in italiano, poi la traduciamo in codice.
+- Utilizziamo `console.log()` per verificare i dati e il funzionamento del codice.
+- Suddividiamo il codice in funzioni più piccole e riutilizzabili, dove possibile.
